@@ -30,7 +30,7 @@ const create_item = () => {
     error.innerHTML = "";
     if (input.value !== "") {
         order += 1;
-        input.innerHTML = input.value;
+        item.innerHTML = input.value;
         adding = false;
 
     } else {
@@ -49,5 +49,5 @@ document.querySelectorAll('.drop').forEach(element => {
         const id = event.dataTransfer.getData('text');
         event.target.appendChild(document.getElementById(id));
     })
-    element.addEventListener('dragover', event => event.preventdefault());
+    element.addEventListener('dragover', event => event.preventDefault());
 });
